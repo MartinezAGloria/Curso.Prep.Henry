@@ -38,7 +38,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-var result = objetoMisterioso.NumeroMisterioso * 5;
+var result = objetoMisterioso.numeroMisterioso * 5;
 return result;
 }
 
@@ -75,7 +75,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto.propiedad) {return true;} else {return false;}
+  if (objeto[propiedad]) {return true;} else {return false;}
 }
 
 function verificarPassword(usuario, password) {
@@ -110,9 +110,9 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
   for (i=0; i<usuarios.length; i++){
-    usuarios[i].usuario.esPremium= "true";
+    usuarios[i].esPremium= true;}
     return usuarios;
-  }
+  
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -123,7 +123,7 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
   sumaLikes = 0;
-  for (i=0; i<usuario.posts.length; i++);{
+  for (i=0; i<usuario.posts.length; i++){
     sumaLikes=sumaLikes+usuario.posts[i].likes;
   }
   return sumaLikes;
